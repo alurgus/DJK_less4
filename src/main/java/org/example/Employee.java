@@ -3,11 +3,11 @@ package org.example;
 public class Employee {
 
     private int id;
-    private long phoneNumber;
+    private Long phoneNumber;
     private String name;
     private int seniority;
 
-    public Employee( long phoneNumber,String name,int seniority) {
+    public Employee(Long phoneNumber, String name, int seniority) {
         this.id = EmployeeIdGenerator.getNextId();
         this.phoneNumber = phoneNumber;
         this.name = name;
@@ -36,7 +36,8 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{id=" + id + ", name='" + name + "'}";
+        return String.format("id: %d , name: %s , phone: %d , sen.: %d", id, name, phoneNumber, seniority);
     }
 
 }
+
